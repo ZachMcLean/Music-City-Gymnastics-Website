@@ -1,0 +1,406 @@
+/* ==============
+CSS Styles for Music City Gymnastics Website
+Created By: Zach McLean
+Project Creation Date: 2/16/2021
+================= */
+
+/* Color Pallete
+    Purple: 372248 
+    Green: 8DE969
+*/
+    
+/* ================
+    Table of Contents
+
+    1. Global Styles
+
+    2. 
+
+    3.
+=================*/
+
+
+/* ==============
+    Global Styles
+================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size: 2.6rem;
+
+}
+
+li, button, label, input, p{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 4.8rem;
+
+}
+
+h3{
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+h4, h5{
+    font-size: 2.8rem;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+button{
+    padding: 2rem 6rem;
+    border: none;
+    background: #477436;
+    color: white;
+    text-shadow: 1.2px 1.2px #000000;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background 1s ease-in-out;
+    /* animation: cloudAnimation 2s infinite; */
+}
+button:hover{
+    background: #255712;
+}
+
+/* Nav Bar Styles */
+
+.main-head{
+    background: rgba(83, 12, 150, 0.8);
+    /* This is what is making the navbar stick to the top of the page */
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+}
+
+nav{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 10vh;
+    padding: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    img{
+        max-width: 10%;
+        height: auto;
+    }
+    ul{
+        /* you can use flex as a short hand to style the nav. 
+        the first value is the flex grow 
+        second is flex shrink
+        3rd is the flex basis which determines how far away text will begin
+        to wrap around it*/
+        display: flex;
+        flex: 1 1 40rem;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+    }
+}
+
+/* ===========
+    Hero Styles
+============== */
+
+#Logo{
+    flex: 1 1 40rem;
+    color: white;
+    font-family: 'Pattaya', sans-serif;
+    font-weight: 400;
+}
+
+.hero{
+    min-height: 90vh;
+    background: linear-gradient(rgba(0,0,0, 0.5), transparent),url('./img/chalk-clap.jpg');
+    /* this is for sizing the image properly on the screen */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    /* we want the behavior to be up and down on top of the page */
+    /* so we change to column style */
+    flex-direction: column;
+    /* justify content and align items changes so jc now can center us */
+    justify-content: center;
+    /* then we center horizontally */
+    align-items: center;
+    /* to center just text */
+    text-align: center;
+
+    h3{
+        padding: 5rem;
+        text-shadow: 3px 3px #000000;
+
+    }
+    h2 {
+        text-shadow: 3px 3px #000000;
+
+    }
+}
+
+/* The Cheer Section */
+
+#landing{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0, 0.5), transparent);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+/* margins hack lol */
+.landing-head{
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+    h2 {
+        padding: 1rem 0rem;
+        text-decoration: underline;
+        text-decoration-thickness: 0.5rem;
+    }
+    h3 {
+        padding: 4rem 0rem;
+        text-shadow: 1.5px 1.5px #000000;
+    }
+}
+
+.landing-img {
+    width: 90%;
+    margin: auto;
+
+}
+/* cloud section */
+
+.cloud{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    pointer-events: none;
+}
+
+.moving-cloud-1{
+    animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+
+.moving-cloud-2{
+    top: 10%;
+    z-index: -1;
+    opacity: 0.5;
+    animation: cloudAnimation 3.3s infinite alternate ease-in-out;
+}
+
+@keyframes cloudAnimation{
+    from{
+        transform: translate(10%, -10%);
+    }
+    top{
+        transform: translate(0%, 0%);
+    }
+}
+
+/* Card(benefits) section */
+
+.benefits-head{
+    background: #343c44;
+    padding: 3rem;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.benefits-head h3 {
+
+    padding: 1rem;
+}
+
+.cards{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 70vh;
+    align-items: center;
+    flex-wrap: wrap;
+    img{
+        max-width: 15%;
+        margin: 2rem;
+    }
+    h4, p {
+        padding: 1rem;
+    }
+}
+
+.card{
+    text-align: center;
+    flex: 1 1 25rem;
+    min-height: 40vh;
+    margin: 2rem 5rem;
+    box-shadow: 0px 10px 10px rgba(0,0,0, 0.1), 0px 20px 20px rgba(0,0,0, 0.1);
+    background-color: lightgreen;
+    img{
+        width: 5rem;
+        height: auto;
+    }
+}
+
+.card-icon {
+    background: #ffffff;
+}
+
+/* Form Section */
+
+#contact{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0, 0.5), transparent), url('./img//beam-leap.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper{
+    background: rgba(19,28,39,0.8);
+    width: 60%;
+    color: white;
+    border-radius:  20px;
+    button{
+        width: 100%;
+        padding: 2rem;
+        margin-top: 8rem;
+        /* This is to round the bottom corners of the button */
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    input{
+        padding: 1rem 3rem;
+    }
+    label{
+        margin: 0rem 3rem;
+    }
+}
+
+.form-head{
+    text-align: center;
+    padding: 4rem;
+}
+
+.name-form,
+.email-form {
+    padding: 3rem;
+    text-align: center;
+}
+
+
+
+
+
+/* Footer Section */
+
+footer{
+    color: white;
+    background: rgba(83, 12, 150, 0.8);
+
+}
+
+.footer-wrapper{
+    display: flex;
+    padding: 2rem;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    min-height: 10vh;
+    flex-wrap: wrap;
+    h5{
+        flex: 1 1 40rem;
+    }
+    ul{
+        display: flex;
+        padding: 2rem;
+        list-style: none;
+        flex: 1 1 40rem;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+}
+
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 932px){
+
+    html{
+        font-size: 45%;
+    }
+    nav{
+        text-align: center;
+
+    }
+    #Logo{
+        padding: 2rem;
+    }
+    .cloud{
+        height: 40rem;
+    }
+    .moving-cloud-1{
+        z-index: -1;
+    }
+    .moving-cloud-2{
+        z-index: -2;
+    }
+    .landing-head h3{
+        background: rgba(19,28,39,0.8);
+        -webkit-text-fill-color: white;
+        /* text-align: center; */
+    }
+    .landing-head{
+        text-align: center;
+    }
+
+    .card{
+        min-width: 40%;
+    }
+
+    .form-wrapper {
+        width: 100%;
+    }
+
+    footer{
+        text-align: center;
+    }
+
+    footer h5{
+        padding-bottom: 3rem;
+    }
+}
