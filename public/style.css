@@ -48,6 +48,7 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
+  background: #17181a;
 }
 
 h1 {
@@ -86,6 +87,7 @@ button {
   cursor: pointer;
   -webkit-transition: background 1s ease-in-out;
   transition: background 1s ease-in-out;
+  border-radius: 20%;
   /* animation: cloudAnimation 2s infinite; */
 }
 
@@ -112,6 +114,7 @@ nav {
   width: 80%;
   margin: auto;
   min-height: 10vh;
+  font-size: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -214,92 +217,109 @@ nav img {
 
 .hero h2 {
   text-shadow: 3px 3px #000000;
+  font-size: 5rem;
+}
+
+.hero a {
+  padding: 1.6rem 3rem;
+  background: #255712;
+  font-size: 2rem;
+  text-decoration: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
+  border-radius: 10%;
 }
 
 /* ===============
     Cheer Section
 ================== */
-#landing {
+.slide {
   min-height: 100vh;
+  margin: 0 auto 0 auto;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  overflow: hidden;
+  color: white;
+  background: #17181a;
 }
 
 /* margins hack lol */
-.landing-head {
-  width: 90%;
-  margin: auto;
-  padding: 2rem;
+.cheer-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-preferred-size: 25rem;
+      flex-basis: 25rem;
+  padding-left: 5rem;
+  position: relative;
 }
 
-.landing-head h2 {
-  padding: 1rem 0rem;
-  text-decoration: underline;
-  text-decoration-thickness: 0.5rem;
+.cheer-img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-preferred-size: 25rem;
+      flex-basis: 25rem;
 }
 
-.landing-head h3 {
-  padding: 4rem 0rem;
-  text-shadow: 1.5px 1.5px #000000;
+.cheer-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.landing-img {
-  width: 90%;
-  margin: auto;
+.cheer-span {
+  color: #765592;
+}
+
+.cheer-desc h2 {
+  font-family: "Abril Fatface";
+  font-size: 5rem;
+  font-weight: lighter;
+}
+
+.cheer-desc p {
+  padding: 3rem 0rem;
+  font-size: 2.2rem;
+  color: #e4e4e4;
+  font-weight: lighter;
+}
+
+.explore {
+  padding: 1.6rem 3.2rem;
+  background: none;
+  border: 2px solid white;
+  font-size: 2rem;
+  text-decoration: none;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  cursor: pointer;
 }
 
 /*===============
 - cloud animation section -
 ================= */
-.cloud {
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  pointer-events: none;
-}
-
-.moving-cloud-1 {
-  -webkit-animation: cloudAnimation 3s infinite alternate ease-in-out;
-          animation: cloudAnimation 3s infinite alternate ease-in-out;
-}
-
-.moving-cloud-2 {
-  top: 10%;
-  z-index: -1;
-  opacity: 0.5;
-  -webkit-animation: cloudAnimation 3.3s infinite alternate ease-in-out;
-          animation: cloudAnimation 3.3s infinite alternate ease-in-out;
-}
-
-@-webkit-keyframes cloudAnimation {
-  from {
-    -webkit-transform: translate(10%, -10%);
-            transform: translate(10%, -10%);
-  }
-  top {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-}
-
-@keyframes cloudAnimation {
-  from {
-    -webkit-transform: translate(10%, -10%);
-            transform: translate(10%, -10%);
-  }
-  top {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-}
-
 /*===============
  Benefits Section 
 =================*/
@@ -326,8 +346,14 @@ nav img {
 
 .benefits-head h3 {
   padding: 1rem;
+  font-size: 2.8rem;
+  font-weight: lighter;
+  color: #765592;
 }
 
+/* ===============
+    Cards Section 
+================== */
 .cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -358,8 +384,8 @@ nav img {
           flex: 1 1 25rem;
   min-height: 55vh;
   margin: 2rem 7rem;
-  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 20px 20px 16px rgba(0, 0, 0, 0.8);
+          box-shadow: 20px 20px 16px rgba(0, 0, 0, 0.8);
   background-color: white;
   width: 10rem;
 }

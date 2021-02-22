@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Pattaya&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
         <title>My Gymnastics Website</title>
     </head>
     <body>
@@ -31,26 +31,31 @@
             <section class="hero">
                 <h2>Music City Gymnastics & Cheer</h2>
                 <h3>“Seeking Enrichment for every child”<br /> -Music City Gymnastics</h3>
-                <button>Portal</button>
+                <a>Portal</a>
             </section>
-
 
                         <!--Cheer section -->
-            <section id="landing">
-                <div class="landing-head">
-                    <h2>Music City Gymnastics & Cheer</h2>
-                    <h3>“Seeking Enrichment for every child” -Music City Gymnastics</h3> 
+        <section class="landing slide">
+            <div class="cheer-img">
+                <img src="./img/cheer-team3.png" alt="mountain image">
+<!-- Empty div that is the same color as the background that will reveal the image when scrolling -->
+<!--IMAGE REVEAL--><div class="reveal-img"></div>
+            </div>
+                <div class="cheer-desc">
+                    <div class="title">
+<!-- The span is so that we can specifically target and style the span differently from the h2 -->
+                        <h2>2020-2021 Competitive <span class="cheer-span">Cheerleading.</span></h2>
+<!-- This is an extra div we will use for a hover effect that fills up text when hovering over a button -->
+                    <div class="title-swipe t-swipe1"></div>
                 </div>
-                <div class="landing-img">
-                    <img src="../public/img/cheer-team1.jpeg">
-                </div>
-            </section>
-
-
+                    <p>All-star cheer is an amazing sport and we are glad you are interested in learning more! Click below to get answers most frequently asked regarding our competitive program.</p>
+                    <a class="explore cheer-exp">Explore</a>
+<!--TEXT REVEAL--><div class="reveal-text"></div>
+            </div>
+        </section>
     <!-- This will be a carousel of our best pictures from the gym, meets, camps, etc -->
         <section id="benefits">
             <header class="benefits-head">
-                <h2>Competitive Gymnastics</h2>
                 <h3>We welcome all ages, from brand new beginners to elite athletes.<br />
                     Contact us to learn more about our teams.</h3>
             </header>
